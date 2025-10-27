@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Credit Card Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <span>📞 1234567890</span>
+      <span>✉️ ccamsinfo@test.in</span>
+    </div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Check Status</li>
+        <li><a href="admin.php">Admin</a></li>
+      </ul>
+    </nav>
+    <h1><span class="bold highlight">CREDIT CARD PROCESSING</span></h1>
+  </header>
+
+
+  <main class="split-container">
+    <div class="left">
+      <h2>Benefits of Credit Cards</h2>
+      <p>A credit card has become an indispensable part of our lives</p>
+      <ul>
+        <li>Easy access to credit</li>
+        <li>Building a line of credit</li>
+        <li>EMI facility</li>
+        <li>Incentives and offers</li>
+        <li>Flexible credit</li>
+        <li>Record of expenses</li>
+        <li>Purchase protection</li>
+        <li>Most accepted method of payment</li>
+        <li>Insurance coverage</li>
+        <li>Make travel easy</li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <form action="submit_application.php" method="POST" enctype="multipart/form-data">
+        <h3>APPLY FOR CREDIT CARD</h3>
+        <input type="text" name="fullname" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Your mail" required />
+        <input type="text" name="phone" placeholder="Phone number" required />
+        <input type="text" name="pan_number" placeholder="PAN Number" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="Enter valid PAN like ABCDE1234F" />
+        <input type="text" name="fathername" placeholder="Father's Name" required />
+        <textarea name="address" placeholder="Enter Address" required></textarea>
+        <input type="text" name="state" placeholder="State" required />
+        <input type="text" name="city" placeholder="City" required />
+        <input type="text" name="pincode" placeholder="Pincode" required />
+        <select name="occupation" required>
+          <option value="">Choose Occupation type</option>
+          <option value="salaried">Salaried</option>
+          <option value="self-employed">Self-Employed</option>
+          <option value="student">Student</option>
+        </select>
+        <input type="text" name="annual_income" placeholder="Enter Monthly Income" required />
+        <button type="submit">APPLY</button>
+      </form>
+    </div>
+
+    <div class="login-register-section">
+      <h2>Login/Register</h2>
+      <ul>
+        <li><a href="admin.php">Admin Login</a></li>
+        <li><a href="customer-register.php">Customer Registration</a></li>
+        <li><a href="customer-login.php">Customer Login</a></li>
+        <li><a href="merchant-register.php">Merchant Registration</a></li>
+        <li><a href="merchant-login.php">Merchant Login</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    Credit Card Application Processing
+  </footer>
+</body>
+</html>
